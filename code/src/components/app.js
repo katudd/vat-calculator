@@ -14,7 +14,7 @@ class App extends React.Component {
 
 handleVatRate = event => {
   this.setState({
-    vatRate: event.target.value 
+    vatRate: event.target.value
   })
 }
 
@@ -36,9 +36,6 @@ handleExVat = event => {
 render() {
   return (
     <div>
-
-      <p>Example calculating ex vat for 1000kr inc vat @ 25%: {incVatToExtVat(25, 1000)}</p>
-      <p>Example calculating inc vat for 600kr ex vat @ 6%: {exVatToIncVat(6, 600)}</p>
 
       <div className="radiobuttons">
         <form>
@@ -87,6 +84,7 @@ render() {
 
           <p> Momssumma, kr:</p>
           <input
+            disabled
             type="number"
             name="vatSum"
             value={this.state.incVat - this.state.exVat} />
